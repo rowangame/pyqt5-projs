@@ -1,0 +1,5 @@
+不带控制台的编译 
+pyinstaller -F -w -i F:\test2\SPPTools\logo.ico main.py --hidden-import at_process_thread.py --hidden-import attest_case_data.py --hidden-import attest_config_data.py --hidden-import attest_manager.py --hidden-import attest_view.py --hidden-import attest_window.py --hidden-import excel_util.py --hidden-import main_tools_manager.py --hidden-import main_tools_view.py --hidden-import main_tools_window.py --hidden-import serial_util.py --hidden-import spp_config_data.py 
+
+带目录的程序
+pyinstaller -D -w -i F:\test2\SPPTools\logo.ico main.py --hidden-import at_process_thread.py --hidden-import attest_case_data.py --hidden-import attest_config_data.py --hidden-import attest_manager.py --hidden-import attest_view.py --hidden-import attest_window.py --hidden-import excel_util.py --hidden-import main_tools_manager.py --hidden-import main_tools_view.py --hidden-import main_tools_window.py --hidden-import serial_util.py --hidden-import spp_config_data.py 

@@ -1,0 +1,5 @@
+1.不带控制台的编译 (将python依赖库也打包进入exe文件)
+pyinstaller -F -w -i F:\test3\Go4Auto\logo.ico main.py --hidden-import auto_cmd_qthread.py --hidden-import bo4_cache_data.py --hidden-import excel_util.py --hidden-import main_view.py --hidden-import main_view_manager.py --hidden-import main_view_window.py --hidden-import serial_util.py
+
+2.打包成exe文件（将python依赖库复制到子目录中）
+pyinstaller -D -w -i F:\test3\Go4Auto\logo.ico main.py --hidden-import auto_cmd_qthread.py --hidden-import bo4_cache_data.py --hidden-import excel_util.py --hidden-import main_view.py --hidden-import main_view_manager.py --hidden-import main_view_window.py --hidden-import serial_util.py

@@ -1,0 +1,22 @@
+1:
+--hidden-import not found 错误：
+打包命令时，请用管理员权限打开cmd命令窗口
+
+2: pyinstaller 打包超时问题可能原因：
+   1.打包命令有错误
+   2.打包要导入的文件与实际文件名不一样
+   3.在系统环境变量设置python环境时，确认python运行环境与当前打包环境是不是一样的
+   4.如果当前目录的权限为只读，则应该修改为可读写
+   5.删除生成的中间目录(build,dist)
+   6.pyinstaller可能有网络异常的原因(这个原因猜测,没有验证)
+   
+
+3：打包失败时，请参考打包成功的日志文件：log-success.txt
+
+4: pyinstaller打包时提示UPX is not available
+   https://blog.csdn.net/chentianveiko/article/details/107083912
+   查了一下, 原来是pyinstaller使用UPX压缩, 所以根据下面的步骤安装了一个UPX就好了:
+  (1) 到官网 https://upx.github.io/ 下载了UPX(我的是Window 32版本), 下载下来是一个压缩包
+  (2) 解压得到 upx.exe文件
+  (3) 把exe文件拷贝到pyinstaller目录下, 我的是 E:\ProgramData\Anaconda3\envs\v_pyqt_0001\Scripts
+

@@ -1,0 +1,14 @@
+ File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "PyInstaller\loader\pyimod02_importers.py", line 419, in exec_module
+  File "pyqt5_plugins\__init__.py", line 11, in <module>
+  File "pkg_resources\__init__.py", line 478, in get_distribution
+  File "pkg_resources\__init__.py", line 354, in get_provider
+  File "pkg_resources\__init__.py", line 909, in require
+  File "pkg_resources\__init__.py", line 795, in resolve
+pkg_resources.DistributionNotFound: The 'pyqt5_plugins' distribution was not found and is required by the application
+
+ref1:
+https://stackoverflow.com/questions/68665420/how-to-solve-the-unexpected-pyinstaller-exception-pyqt5-plugins-distribution-wa
+
+解决问题：
+代码内没有引入 from PyQt5.QtGui 使用QtGui导致的
