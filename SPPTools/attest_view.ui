@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>wnd_attest</class>
+ <widget class="QMainWindow" name="wnd_attest">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>指令验证测试</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>17</x>
+      <y>157</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>指令列表:</string>
+    </property>
+   </widget>
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>203</y>
+      <width>701</width>
+      <height>571</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnLoad">
+    <property name="geometry">
+     <rect>
+      <x>121</x>
+      <y>160</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>加载指令</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>235</x>
+      <y>157</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>串口选择:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cmbNumSlt">
+    <property name="geometry">
+     <rect>
+      <x>327</x>
+      <y>161</y>
+      <width>81</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnComFresh">
+    <property name="geometry">
+     <rect>
+      <x>418</x>
+      <y>159</y>
+      <width>71</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>刷新</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>515</x>
+      <y>155</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>波特率:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cmbBaudrateSlt">
+    <property name="geometry">
+     <rect>
+      <x>591</x>
+      <y>159</y>
+      <width>121</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnTestAll">
+    <property name="geometry">
+     <rect>
+      <x>744</x>
+      <y>157</y>
+      <width>111</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>开始测试</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSaveData">
+    <property name="geometry">
+     <rect>
+      <x>1018</x>
+      <y>155</y>
+      <width>111</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>保存测试数据</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>开始时间:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edtStrtTime">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>10</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>yyyy-mm-dd</string>
+    </property>
+    <property name="maxLength">
+     <number>20</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>21</x>
+      <y>57</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>结束时间:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edtEndTime">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>57</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>yyyy-mm-dd</string>
+    </property>
+    <property name="maxLength">
+     <number>20</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>106</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>持续时间:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edtDurTime">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>106</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0000(s)</string>
+    </property>
+    <property name="maxLength">
+     <number>20</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>57</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>测试员ID：</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edtJobId">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>57</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>01</string>
+    </property>
+    <property name="maxLength">
+     <number>20</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>106</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>测试平台：</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edtTestPlat">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>106</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>WIN10</string>
+    </property>
+    <property name="maxLength">
+     <number>20</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>581</x>
+      <y>57</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>产品类型：</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edtModelType">
+    <property name="geometry">
+     <rect>
+      <x>681</x>
+      <y>57</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>A3040</string>
+    </property>
+    <property name="maxLength">
+     <number>20</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>583</x>
+      <y>106</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>产品 MAC：</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edtMacAddr">
+    <property name="geometry">
+     <rect>
+      <x>681</x>
+      <y>106</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>none</string>
+    </property>
+    <property name="maxLength">
+     <number>20</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblTitle">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>10</y>
+      <width>501</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>             A3040指令功能测试</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblTestRlt">
+    <property name="geometry">
+     <rect>
+      <x>882</x>
+      <y>80</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>18</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>NONE</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnEndTest">
+    <property name="geometry">
+     <rect>
+      <x>879</x>
+      <y>156</y>
+      <width>111</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>结束测试</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="edtHint">
+    <property name="geometry">
+     <rect>
+      <x>728</x>
+      <y>203</y>
+      <width>461</width>
+      <height>571</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblQrcode">
+    <property name="geometry">
+     <rect>
+      <x>1015</x>
+      <y>26</y>
+      <width>131</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Mac二维码</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

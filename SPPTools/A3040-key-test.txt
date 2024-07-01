@@ -1,0 +1,33 @@
+串口接线:
+第一排：最右边：黑色线，中间空三个针脚，第五个针脚接 蓝色的线
+第二排：第八个针脚 接黄色的线
+
+# 按键测试,需要拔掉一红黄色的线
+注意:发送指令时需要重新连接这跟线
+#如果按键测试打印的日志与按键相匹配，则认为这个按键测试通过，否则就是失败
+
+Volume Down key ok!
+Volume Down key ok!
+Volume Up key ok!
+Volume Up key ok!
+Volume Up key ok!
+mfb key ok!
+mfb key ok!
+Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+anc key ok!
+Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+anc key ok!
+Power key ok!
+Power key ok!
+Power key ok!
+
+TX->bb030000000028000b00f1
+Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+
+TX->bb030000000028000b00f1
+Receive the command success
+
+TR: CMD_KEY_TEST stop

@@ -1,0 +1,387 @@
+id=[1],进入产测模式,命令开始...
+TX->bb030000000001000b00ca 命令次数=[1]
+RX->    28031/R-M/I/NONE  /17E | factory_test_cmd_analysis len = b,dataL = b dataH=0
+    28031/R-M/I/NONE  /17E | factory_test_cmd_analysis verify_checksum :ca
+bb 03 00 00 00 00 01 00 0b 00 ca 
+    28031/R-M/I/NONE  /17E | compute_check_sum checksum = ca, checksum2 = ca
+Receive the command success
+
+    28034/R-M/I/NONE  /  7 | app_product_test_handle: param_0 = 1, param_1 = 0
+    28034/R-M/I/NONE  /  7 | [STRM_PLAYER][VOL][SET] vol=15
+TR: CMD:CMD_PT_START
+ CMD_ID:1, SID:0
+
+TR: CMD_PT_START
+ Success
+
+
+
+
+bb030000000001000b00ca,发送指令:OK
+id=[1],人工执行相关操作等待中:(2s)
+id=[1],人工确认结果等待中:(0s)
+
+
+
+id=[2],获取软件版本,命令开始...
+TX->bb030000000003000b00cc 命令次数=[1]
+RX->Receive the command success
+
+TR: CMD:CMD_GET_INFO
+ CMD_ID:3, SID:0
+
+Prj: A3040 Fw_Version:  0.1.3.3
+
+BLE Name:BES_BLE,
+BLE Addr:
+af 7e 43 cc ee e8 
+
+BT Name:soundcore Space Q45,
+BT Addr:
+af 7e 43 cc ee e8 
+
+
+bb030000000003000b00cc,发送指令:OK
+id=[2],人工执行相关操作等待中:(2s)
+id=[2],人工确认结果等待中:(0s)
+
+
+
+id=[3],获取蓝牙地址,命令开始...
+TX->bb030000000023000b00ec 命令次数=[1]
+RX->Receive the command success
+
+TR: CMD:CMD_GET_BT_ADDR
+ CMD_ID:23, SID:0
+
+BT Name:soundcore Space Q45
+
+
+BT Addr:
+af 7e 43 cc ee e8 
+
+
+bb030000000023000b00ec,发送指令:OK
+id=[3],人工执行相关操作等待中:(2s)
+id=[3],人工确认结果等待中:(0s)
+
+
+
+id=[4],开始按键测试,命令开始...
+TX->bb030000000027000b00f0 命令次数=[1]
+RX->Receive the command success
+
+TR: CMD:CMD_KEY_TEST_START
+ CMD_ID:27, SID:0
+
+
+bb030000000027000b00f0,发送指令:OK
+
+
+
+按键测试->前置条件:请拔掉串口设备的一根数据线,用于验证按键测试
+前置条件->等待时间:(1)秒
+前置条件->等待时间:(2)秒
+前置条件->等待时间:(3)秒
+前置条件->等待时间:(4)秒
+前置条件->等待时间:(5)秒
+前置条件->等待时间:(6)秒
+前置条件->等待时间:(7)秒
+前置条件->等待时间:(8)秒
+前置条件->等待时间:(9)秒
+前置条件->等待时间:(10)秒
+前置条件->操作确认等待:(1)秒
+前置条件->操作确认等待:(2)秒
+
+
+
+按键测试->按键操作:请按(电源键)1~3次
+按键操作->等待时间:(1)秒
+按键操作->等待时间:(2)秒
+按键操作->等待时间:(3)秒
+按键操作->等待时间:(4)秒
+按键操作->等待时间:(5)秒
+按键操作->等待时间:(6)秒
+按键操作->等待时间:(7)秒
+按键操作->等待时间:(8)秒
+按键操作->操作确认等待:(1)秒
+RX->Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+Power key ok!
+
+Power key ok!
+
+Power key ok!
+
+
+按键操作->读取按键结果数据:OK
+按键操作->验证(电源键)按键操作:OK
+按键操作->操作确认等待:(2)秒
+
+
+
+按键测试->按键操作:请按(Anc键)1~3次
+按键操作->等待时间:(1)秒
+按键操作->等待时间:(2)秒
+按键操作->等待时间:(3)秒
+按键操作->等待时间:(4)秒
+按键操作->等待时间:(5)秒
+按键操作->等待时间:(6)秒
+按键操作->等待时间:(7)秒
+按键操作->等待时间:(8)秒
+按键操作->操作确认等待:(1)秒
+RX->Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+anc key ok!
+
+Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+anc key ok!
+
+
+按键操作->读取按键结果数据:OK
+按键操作->验证(Anc键)按键操作:OK
+按键操作->操作确认等待:(2)秒
+
+
+
+按键测试->按键操作:请按(Mfb键)1~3次
+按键操作->等待时间:(1)秒
+按键操作->等待时间:(2)秒
+按键操作->等待时间:(3)秒
+按键操作->等待时间:(4)秒
+按键操作->等待时间:(5)秒
+按键操作->等待时间:(6)秒
+按键操作->等待时间:(7)秒
+按键操作->等待时间:(8)秒
+RX->mfb key ok!
+
+mfb key ok!
+
+
+按键操作->读取按键结果数据:OK
+按键操作->验证(Mfb键)按键操作:OK
+按键操作->操作确认等待:(1)秒
+
+
+
+按键测试->按键操作:请按(音量+键)1~3次
+按键操作->等待时间:(1)秒
+按键操作->等待时间:(2)秒
+按键操作->等待时间:(3)秒
+按键操作->等待时间:(4)秒
+按键操作->等待时间:(5)秒
+按键操作->等待时间:(6)秒
+按键操作->等待时间:(7)秒
+按键操作->等待时间:(8)秒
+按键操作->操作确认等待:(1)秒
+RX->Volume Up key ok!
+
+Volume Up key ok!
+
+Volume Up key ok!
+
+
+按键操作->读取按键结果数据:OK
+按键操作->验证(音量+键)按键操作:OK
+按键操作->操作确认等待:(2)秒
+
+
+
+按键测试->按键操作:请按(音量-键)1~3次
+按键操作->等待时间:(1)秒
+按键操作->等待时间:(2)秒
+按键操作->等待时间:(3)秒
+按键操作->等待时间:(4)秒
+按键操作->等待时间:(5)秒
+按键操作->等待时间:(6)秒
+按键操作->等待时间:(7)秒
+按键操作->等待时间:(8)秒
+RX->Volume Down key ok!
+
+Volume Down key ok!
+
+Volume Down key ok!
+
+
+按键操作->读取按键结果数据:OK
+按键操作->验证(音量-键)按键操作:OK
+按键操作->操作确认等待:(1)秒
+
+
+
+按键测试->复位操作:请连接串口设备的一根数据线,才能继续下步测试
+复位操作->等待时间:(1)秒
+复位操作->等待时间:(2)秒
+复位操作->等待时间:(3)秒
+复位操作->等待时间:(4)秒
+复位操作->等待时间:(5)秒
+复位操作->等待时间:(6)秒
+复位操作->等待时间:(7)秒
+复位操作->等待时间:(8)秒
+复位操作->等待时间:(9)秒
+复位操作->等待时间:(10)秒
+复位操作->操作确认等待:(1)秒
+复位操作->操作确认等待:(2)秒
+复位操作->操作确认等待:(3)秒
+复位操作->操作确认等待:(4)秒
+复位操作->操作确认等待:(5)秒
+复位操作->操作确认等待:(6)秒
+复位操作->操作确认等待:(7)秒
+复位操作->操作确认等待:(8)秒
+复位操作->操作确认等待:(9)秒
+id=[4],人工确认结果等待中:(0s)
+
+
+
+id=[10],停止按键测试,命令开始...
+TX->bb030000000028000b00f1 命令次数=[1]
+RX->Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+Product_Test_Mode_Command_Phase Receive some err command, err_code = 1
+Receive the command success
+
+TR: CMD_KEY_TEST stop
+
+
+bb030000000028000b00f1,发送指令:OK
+id=[10],人工确认结果等待中:(0s)
+
+
+
+id=[11],LED测试:所有灯亮灭三次,命令开始...
+TX->bb030000000007000b00d0 命令次数=[1]
+RX->Receive the command success
+
+TR: CMD:CMD_LED_TEST
+ CMD_ID:7, SID:0
+
+
+bb030000000007000b00d0,发送指令:OK
+id=[11],人工执行相关操作等待中:(2s)
+id=[11],人工确认结果等待中:(0s)
+
+
+
+id=[12],打开所有灯,命令开始...
+TX->bb030000000008000b00d1 命令次数=[1]
+RX->TR: CMD_LED_TEST end
+
+Receive the command success
+
+TR: CMD:CMD_ALL_LED_ON
+ CMD_ID:8, SID:0
+
+
+bb030000000008000b00d1,发送指令:OK
+id=[12],人工执行相关操作等待中:(2s)
+id=[12],人工确认结果等待中:(0s)
+
+
+
+id=[13],关闭所有灯,命令开始...
+TX->bb030000000009000b00d2 命令次数=[1]
+RX->Receive the command success
+
+TR: CMD:CMD_ALL_LED_OFF
+ CMD_ID:9, SID:0
+
+
+bb030000000009000b00d2,发送指令:OK
+id=[13],人工执行相关操作等待中:(2s)
+id=[13],人工确认结果等待中:(0s)
+
+
+
+id=[14],打开蓝灯,命令开始...
+TX->bb03000000000a000b00d3 命令次数=[1]
+RX->Receive the command success
+
+TR: CMD:CMD_PT_LEDB_ON
+ CMD_ID:a, SID:0
+
+
+bb03000000000a000b00d3,发送指令:OK
+id=[14],人工执行相关操作等待中:(2s)
+id=[14],人工确认结果等待中:(0s)
+
+
+
+id=[15],关闭蓝灯,命令开始...
+TX->bb03000000000b000b00d4 命令次数=[1]
+RX->Receive the command success
+
+TR: CMD:CMD_PT_LEDB_OFF
+ CMD_ID:b, SID:0
+
+
+bb03000000000b000b00d4,发送指令:OK
+id=[15],人工执行相关操作等待中:(2s)
+id=[15],人工确认结果等待中:(0s)
+
+
+
+id=[16],打开红灯,命令开始...
+TX->bb03000000000c000b00d5 命令次数=[1]
+RX->Receive the command success
+
+TR: CMD:CMD_PT_LEDR_ON
+ CMD_ID:c, SID:0
+
+
+bb03000000000c000b00d5,发送指令:OK
+id=[16],人工执行相关操作等待中:(2s)
+id=[16],人工确认结果等待中:(0s)
+
+
+
+id=[17],关闭红灯,命令开始...
+TX->bb03000000000d000b00d6 命令次数=[1]
+RX->Receive the command success
+
+TR: CMD:CMD_PT_LEDR_OFF
+ CMD_ID:d, SID:0
+
+
+bb03000000000d000b00d6,发送指令:OK
+id=[17],人工执行相关操作等待中:(2s)
+id=[17],人工确认结果等待中:(0s)
+
+
+
+id=[18],打开白灯,命令开始...
+TX->bb03000000000e000b00d7 命令次数=[1]
+RX->Receive the command success
+
+TR: CMD:CMD_PT_LEDW_ON
+ CMD_ID:e, SID:0
+
+
+bb03000000000e000b00d7,发送指令:OK
+id=[18],人工执行相关操作等待中:(2s)
+id=[18],人工确认结果等待中:(0s)
+
+
+
+id=[19],关闭白灯,命令开始...
+TX->bb03000000000f000b00d8 命令次数=[1]
+RX->Receive the command success
+
+TR: CMD:CMD_PT_LEDW_OFF
+ CMD_ID:f, SID:0
+
+
+bb03000000000f000b00d8,发送指令:OK
+id=[19],人工执行相关操作等待中:(2s)
+id=[19],人工确认结果等待中:(0s)

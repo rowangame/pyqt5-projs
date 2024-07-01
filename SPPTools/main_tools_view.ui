@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>main_tools_view</class>
+ <widget class="QMainWindow" name="main_tools_view">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>串口工具-指令测试</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>24</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>串口号：</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comNumSlt">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>24</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnComFresh">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>22</y>
+      <width>101</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>刷新</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>22</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>波特率：</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cmbBaudrateSlt">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>22</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>77</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>校验位：</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cmbBitCheckSlt">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>77</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>77</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>数据位：</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cmbDataCheckSlt">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>77</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>77</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>停止位：</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cmbStopBitSlt">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>77</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnComOpen">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>22</y>
+      <width>101</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>打开串口</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAtSend">
+    <property name="geometry">
+     <rect>
+      <x>372</x>
+      <y>127</y>
+      <width>101</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>发送</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>22</x>
+      <y>127</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>AT指令：</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>230</y>
+      <width>991</width>
+      <height>491</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnClear">
+    <property name="geometry">
+     <rect>
+      <x>22</x>
+      <y>179</y>
+      <width>101</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>清除数据</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAtTestSlt">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>178</y>
+      <width>101</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>指令验证</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="edtAtInput">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>128</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maxLength">
+     <number>100</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
